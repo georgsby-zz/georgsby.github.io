@@ -40,9 +40,13 @@ $(document).ready(function($) {
 			return $(this).attr("src").replace(".svg", ".png");
 		});
 	};
+	
+	
+});
 
+$(document).ready(function(){
 	//E-mail Ajax Send
-	$("#form").submit(function() { //Change
+	$("form").submit(function() { //Change
 		var th = $(this);
 		$.ajax({
 			type: "POST",
@@ -57,7 +61,6 @@ $(document).ready(function($) {
 		});
 		return false;
 	});
-	
 });
 
 $(document).ready(function(){
