@@ -41,20 +41,21 @@ $(document).ready(function($) {
 		});
 	};
 
-	//Аякс отправка форм
-	//Документация: http://api.jquery.com/jquery.ajax/
-	$("#form").submit(function(e) {
-		e.preventDefault;
+	//E-mail Ajax Send
+	$("#form").submit(function() { //Change
+		var th = $(this);
 		$.ajax({
 			type: "POST",
-			url: "mail.php",
-			data: $(this).serialize()
+			url: "mail.php", //Change
+			data: th.serialize()
 		}).done(function() {
-			alert("Спасибо за заявку!");
+			alert("Thank you!");
 			setTimeout(function() {
-				$.fancybox.close();
+				// Done Functions
+				th.trigger("reset");
 			}, 1000);
 		});
+		return false;
 	});
 	
 });
