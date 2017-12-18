@@ -145,7 +145,8 @@ body textarea:required:valid {
     background-color: #67bc5c; }
 
 header {
-  background-image: url(../img/header_bg.png);
+  background-image: url(../img/header_bg.jpg);
+	background-color: #000;
   background-position: top center;
   min-height: 786px !important;
   background-size: cover;
