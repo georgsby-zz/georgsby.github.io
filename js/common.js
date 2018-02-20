@@ -20,7 +20,7 @@ $(document).ready(function($) {
 
 	$(window).on('load', function() {
 		$('#slider').nivoSlider();
-	});	
+	});
 
 
 
@@ -33,48 +33,36 @@ $(document).ready(function($) {
 		wResize();
 	});
 
-	
+
 	//SVG Fallback
 	if(!Modernizr.svg) {
 		$("img[src*='svg']").attr("src", function() {
 			return $(this).attr("src").replace(".svg", ".png");
 		});
 	};
-	
-	
+
+
 });
 
 $(document).ready(function(){
 	//E-mail Ajax Send
 	$("form").submit(function() { //Change
-		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: "mail.php", //Change
-			data: th.serialize()
-		}).done(function() {
-			alert("Thank you!");
-			setTimeout(function() {
-				// Done Functions
-				th.trigger("reset");
-			}, 1000);
-		});
-		return false;
+		alert("Unfortunately at the moment it is impossible to send data from the form. You can send an email to georgsby@gmail.com. Sorry for the inconvenience.")
 	});
 });
 
 $(document).ready(function(){
-	$('.greet_line').animated("slideInLeft", "slideInLeft");	
+	$('.greet_line').animated("slideInLeft", "slideInLeft");
 	$('.top_name, .top_desc').animated('slideInRight', 'slideInRight');
 	$('.button').animated('fadeInUpBig', 'fadeInUpBig');
 
 	$('.about_anim').animated('slideUp', 'slideUp');
-	$('.list-left').animated("slideInLeft", "slideInLeft");	
+	$('.list-left').animated("slideInLeft", "slideInLeft");
 	$('.list-right').animated('slideInRight', 'slideInRight');
 	$('.about_desc').animated('flipInX', 'flipInX');
 	$('.link_resume').animated('swing', 'swing');
 
-	$('.design').animated("slideInLeft", "slideInLeft");	
+	$('.design').animated("slideInLeft", "slideInLeft");
 	$('.back-end').animated('slideInRight', 'slideInRight');
 	$('.web').animated('zoomInDown', 'zoomInDown');
 
