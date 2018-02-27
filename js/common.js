@@ -46,9 +46,7 @@ $(document).ready(function($) {
 
 $(document).ready(function(){
 	//E-mail Ajax Send
-	$("form").submit(function() { //Change
-		alert("Unfortunately at the moment it is impossible to send data from the form. You can send an email to georgsby@gmail.com. Sorry for the inconvenience.")
-	});
+
 });
 
 $(document).ready(function(){
